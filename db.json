@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "12345"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "title": "Administrator"
+    },
+    {
+      "id": 2,
+      "title": "User"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "addressId": null,
+      "userId": 1,
+      "roleId": 2,
+      "name": "employee1",
+      "position": "Junior Executive",
+      "employeeId": "ID1234",
+      "deleted_at": null
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "addr1",
+      "unitBlockBuilding": "Unit/Block/Building address",
+      "street": "Street Address",
+      "postcode": 58000,
+      "country": "Malaysia"
+    }
+  ]
+}
