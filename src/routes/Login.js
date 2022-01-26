@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import RegisterOrLoginForm from "../components/RegisterOrLoginForm";
 
-export default function Register() {
+export default function SignUp() {
   return (
     <Box
       sx={{
@@ -12,7 +12,7 @@ export default function Register() {
         alignItems: "center",
       }}
     >
-      <RegisterOrLoginForm isRegister />
+      <RegisterOrLoginForm isRegister={false} />
     </Box>
   );
 }

@@ -2,13 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./index.css";
 
 import App from "./App";
-import SignUp from "./routes/SignUp";
+import Login from "./routes/Login";
 import Register from "./routes/Register";
 
 import reportWebVitals from "./reportWebVitals";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#50D492",
+    },
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,11 +29,13 @@ ReactDOM.render(
       />
       <CssBaseline />
 
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="signup" element={<SignUp />} />
-        <Route path="register" element={<Register />} />
-      </Routes>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
